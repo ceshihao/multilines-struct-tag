@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestStructTagGet(t *testing.T) {
+func TestStructTagLookup(t *testing.T) {
 	cases := []struct {
 		structTag reflect.StructTag
 		tagName   string
@@ -68,4 +68,9 @@ func TestStructTagGet(t *testing.T) {
 		assert.Equal(t, c.valid, ok, "%d case fail: structTag is %s and tagName is %s", i, c.structTag, c.tagName)
 		assert.Equal(t, c.expected, res, "%d case fail: structTag is %s and tagName is %s", i, c.structTag, c.tagName)
 	}
+}
+
+func TestStructTagGet(t *testing.T) {
+	val := Get(`tag1:"value1"`, "tag1")
+	assert.Equal(t, "value1", val)
 }

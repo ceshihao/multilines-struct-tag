@@ -10,7 +10,9 @@ Golang struct supports multilines tags
 There was a [propose](https://github.com/golang/go/issues/15893) to accept multilines struct tag in golang, but rejected.
 
 This package is based on Golang standard library.
+
 https://golang.org/pkg/reflect/#StructTag.Get
+
 https://golang.org/pkg/reflect/#StructTag.Lookup
 
 ## Notice
